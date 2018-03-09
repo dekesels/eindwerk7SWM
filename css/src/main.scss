@@ -16,6 +16,10 @@ $btn-border-radius:0.5rem;
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
 
+// plugins
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+
+//own css 
 .footer {
     position: absolute;
     right: 0;
@@ -25,13 +29,15 @@ $btn-border-radius:0.5rem;
     background-color: #efefef;
     text-align: center;
  }
+ .check{
+    background: #ddd; 
+    color: red;
+ }
  @media (min-width: 1200px) {
     .row {
         width:100%
      }
   }
 
-// plugins
-@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 
