@@ -1,6 +1,6 @@
 @import "node_modules/bootstrap/scss/functions";
 $border-radius:.25rem;
-$btn-border-radius:1rem;
+$btn-border-radius:0.5rem;
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 
@@ -18,4 +18,60 @@ $btn-border-radius:1rem;
 
 // plugins
 @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+
+//own css 
+p{
+    color:#333030;
+}
+@media (min-width: 1200px) {
+    .row {
+        width:100%
+     }
+  }
+.footer {
+    padding: 5px;
+    background-color: #d87163;
+    text-align: center;
+ }
+.footer p{
+        color:white;
+    }
+ .navbar{
+    background:#dd8a2e;
+ }
+ h1{
+     color:#dd8a2e;
+ }
+ .flavours h2{
+     color:#ea527d;
+ }
+ .flavours .btn{
+     background-color:#ea527d; 
+     color:white;
+    }
+ .btn-main{
+    background-color:#dd8a2e;
+    color:white;
+ }
+ .flavours{
+     background-color:#f9ece5;
+ }
+ .nav-link{
+     color:white;
+ }
+ .raspberry{
+    color:#ea527d;
+ }
+ .lemon{
+    color:#dd8a2e;
+ }
+ .peach{
+    color: #d87163;
+ }
+ .product{
+     color:#d87163;
+ }
+
+
+
 
