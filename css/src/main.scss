@@ -58,6 +58,7 @@ $btn-border-radius:0.5rem;
 p{
     color:#333030;
     font-family: 'geosanslightregular';
+    font-size:1.15em;
 }
 @media (min-width: 1200px) {
     .row {
@@ -83,15 +84,19 @@ p{
  #flavours h2{
      color:#ea527d;
  }
+
  h1,h2{
     font-family: 'unisanssemiboldbold';
  }
  .italic{
-    font-family: 'geosanslightregular';
+    font-family: 'geosanslightmedium_italic';
  }
  #flavours .btn{
      background-color:#ea527d; 
      color:white;
+     margin:0 auto;
+     text-align:center;
+     margin:2% 0;
     }
  .btn-main{
     background-color:#dd8a2e;
@@ -104,6 +109,19 @@ p{
  #flavours{
      background-color:#f9ece5;
  }
+ #flavours .row{
+     width:60%;
+     margin:0 auto;
+ }
+ #flavours, #flavours .row {
+    text-align:center;
+ }
+ .flavours-st{
+    width:60%;
+    text-align:center;
+    margin:0 auto;
+    padding:2%;
+}
  .nav-link{
      color:white;
  }
