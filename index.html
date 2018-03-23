@@ -2,6 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/dist/main.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fruktovy</title>
@@ -30,35 +47,49 @@
     </ul>
   </nav>
   <div >
-    <img src="images/bottles.png" width="500"  class="d-inline-block align-top" alt="">
-    <h1>TASTE NATURE</h1>
-    <p>Ontdek de smaak van de natuur op een gezonde manier, en een lekkere manier!</p>
-    <button type="button" class="btn btn-main"><a href="#product">ONTDEK</a></button>
+    <div class="row">
+      <div class="col-sm">
+        <img src="images/bottles.png" width="500"  class="d-inline-block align-top" alt="image of the bottles">
+      </div>
+      <div class="col-sm">
+        <h1>TASTE NATURE</h1>
+        <p>Ontdek de smaak van de natuur op een gezonde manier, en een lekkere manier!</p>
+        <button type="button" class="btn btn-main"><a href="#product">ONTDEK</a></button>
+      </div>
+    </div>
   </div>
   <div id="flavours">
     <h2>SMAKEN</h2>
-    <p>In ons assortiment van smaken zit voor elk wat wils. Maak zelf de keuse of je favoriete smaak de zoete,
+    <p>In ons assortiment van smaken zit voor elk wat wils. Maak zelf de keuze of je favoriete smaak de zoete,
       de zure of de gulden middenweg is. Miscchien vallen ze alle drie wel in de smaak!</p>
     <div class="row">
       <div class="col-sm">
       <h3 class="lemon">CITROEN</h3>
       <p>Je zure vriend die eerder zorgt voor een explosie van smaak in je mond</p>
+      <img src="images/lemon.svg" width="250"  class="d-inline-block align-top" alt="SVG of lemon">
       </div>
       <div class="col-sm">
       <h3 class="raspberry">FRAMBOOS</h3>
       <p>De gulden middenweg tussen beide, geeft zowel een explosie van smaak als een zoete nasmaak</p>
+      <img src="images/raspberry.svg" width="250"  class="d-inline-block align-top" alt="SVG of raspberry">
       </div>
       <div class="col-sm">
       <h3 class="peach">PERZIK</h3>
       <p>Je zoete vriend die ook zoet is zonder een bom van suikers</p>
+      <img src="images/peach.svg" width="250"  class="d-inline-block align-top" alt="SVG of peach">
       </div>
     </div>
-    <button type="button" class="btn btn-warning">BESTELLEN</button>
+    <button type="button" class="btn"><a href="order.html">BESTELLEN</a></button>
   </div>
   <div>
     <h2 id="product">PRODUCT</h2>
     <p>Met ons product willen we mensen die een gezonde levensstijl hebben ook laten genieten van zoete drankjes,
       met minder suikers maar met net zoveel meer smaak!</p>
+      <div class="sizer">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZttvNOsG7Iw?rel=0" allowfullscreen></iframe>
+        </div>
+      </div>  
   </div>
   <div class="footer">
       <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>
@@ -67,3 +98,4 @@
   <script src="js/dist/main.min.js"></script>
 </body>
 </html>
+
