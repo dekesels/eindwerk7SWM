@@ -55,7 +55,7 @@ $btn-border-radius:0.5rem;
 }
 
 
-p{
+p,.form{
     color:#333030;
     font-family: 'geosanslightregular';
     font-size:1.15em;
@@ -78,6 +78,19 @@ p{
     background:#dd8a2e;
     font-family: 'uni_sansthin_caps';
  }
+ .nav{
+     margin:0 25% 0 0;
+ }
+ .nav-link{
+    color:white;
+}
+.nav-item{
+    padding:0 1%;          
+}
+.navbar-brand{
+    margin:0 0 0 10%;
+}
+
  h1{
      color:#dd8a2e;
  }
@@ -98,7 +111,7 @@ p{
      text-align:center;
      margin:2% 0;
     }
- .btn-main{
+ .btn-main, .btn{
     background-color:#dd8a2e;
     color:white;
  }
@@ -116,18 +129,15 @@ p{
  #flavours, #flavours .row {
     text-align:center;
  }
- .flavours-st{
+ .flavours-st, #product{
     width:60%;
     text-align:center;
     margin:0 auto;
-    padding:2%;
+    padding:1%;
 }
- .nav-link{
-     color:white;
- }
- .navbar-brand{
-     margin:0 0 0 10%;
- }
+#flavours, #product{
+    padding:4%;
+}
  .raspberry{
     color:#ea527d;
  }
@@ -147,7 +157,11 @@ p{
 }
 .sizer {
     width: 70%;
+    margin:0 auto,
   }
+.container{
+    padding:5%;
+}
 
 
 
