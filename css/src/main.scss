@@ -57,12 +57,14 @@ $btn-border-radius:0.5rem;
 
 p{
     color:#333030;
+    font-family: 'geosanslightregular';
 }
 @media (min-width: 1200px) {
     .row {
-        width:100%
+        width:100%;
      }
   }
+
 .footer {
     padding: 5px;
     background-color: #d87163;
@@ -73,12 +75,19 @@ p{
     }
  .navbar{
     background:#dd8a2e;
+    font-family: 'uni_sansthin_caps';
  }
  h1{
      color:#dd8a2e;
  }
  #flavours h2{
      color:#ea527d;
+ }
+ h1,h2{
+    font-family: 'unisanssemiboldbold';
+ }
+ .italic{
+    font-family: 'geosanslightregular';
  }
  #flavours .btn{
      background-color:#ea527d; 
@@ -109,6 +118,7 @@ p{
  .btn a{
     text-decoration:none;
     color:white;
+    font-family: 'geosanslightregular';
 }
 .sizer {
     width: 70%;
