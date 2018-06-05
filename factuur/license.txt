@@ -1,6 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software to use, copy, modify, distribute, sublicense, and/or sell
 copies of the software, and to permit persons to whom the software is furnished
 to do so.
 
+=======
+=======
+>>>>>>> da9c20a3d584439d74c002526289182c022c66cb
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software to use, copy, modify, distribute, sublicense, and/or sell
+copies of the software, and to permit persons to whom the software is furnished
+to do so.
+
+<<<<<<< HEAD
+>>>>>>> da9c20a3d584439d74c002526289182c022c66cb
+=======
+>>>>>>> da9c20a3d584439d74c002526289182c022c66cb
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.

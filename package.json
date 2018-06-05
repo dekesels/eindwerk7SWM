@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+{
+  "name": "bootstrap-demo",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.2.5",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefanie",
+  "license": "ISC"
+}
+=======
 {
   "name": "bootstrap-demo",
   "version": "1.0.0",
@@ -24,3 +50,4 @@
   "author": "Stefanie",
   "license": "ISC"
 }
+>>>>>>> da9c20a3d584439d74c002526289182c022c66cb
