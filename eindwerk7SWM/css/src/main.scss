@@ -1,0 +1,169 @@
+@import "node_modules/bootstrap/scss/functions";
+$border-radius:.25rem;
+$btn-border-radius:0.5rem;
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/alert";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+
+// plugins
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+
+//own css 
+
+@font-face {
+    font-family: 'unisanssemiboldbold';
+    src: url('../../fonts/uni_sans_semibold-webfont.woff2') format('woff2'),
+         url('../../fonts/uni_sans_semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'geosanslightregular';
+    src: url('../../fonts/geosanslight-webfont.woff2') format('woff2'),
+         url('../../fonts/geosanslight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'geosanslightmedium_italic';
+    src: url('../../fonts/geosanslight-oblique-webfont.woff2') format('woff2'),
+         url('../../fonts/geosanslight-oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'uni_sansthin_caps';
+    src: url('../../fonts/uni_sans_thin-webfont.woff2') format('woff2'),
+         url('../../fonts/uni_sans_thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+p,.form{
+    color:#333030;
+    font-family: 'geosanslightregular';
+    font-size:1.15em;
+}
+@media (min-width: 1200px) {
+    .row {
+        width:100%;
+     }
+  }
+
+.footer {
+    padding: 5px;
+    background-color: #d87163;
+    text-align: center;
+ }
+.footer p{
+        color:white;
+    }
+ .navbar{
+    background:#dd8a2e;
+    font-family: 'uni_sansthin_caps';
+ }
+ .nav{
+     margin:0 25% 0 0;
+ }
+ .nav-link{
+    color:white;
+}
+.nav-item{
+    padding:0 1%;          
+}
+.navbar-brand{
+    margin:0 0 0 10%;
+}
+
+ h1{
+     color:#dd8a2e;
+ }
+ #flavours h2{
+     color:#ea527d;
+ }
+
+ h1,h2{
+    font-family: 'unisanssemiboldbold';
+ }
+ .italic{
+    font-family: 'geosanslightmedium_italic';
+ }
+ #flavours .btn{
+     background-color:#ea527d; 
+     color:white;
+     margin:0 auto;
+     border-radius:.25rem;
+     text-align:center;
+     margin:2% 0;
+    }
+ .btn-main, .btn{
+    background-color:#dd8a2e;
+    color:white;
+ }
+ .bottles{
+    margin:5% 20%;
+    width:70%;
+ }
+ #flavours{
+     background-color:#f9ece5;
+ }
+ #flavours .row{
+     width:60%;
+     margin:0 auto;
+ }
+ #flavours, #flavours .row {
+    text-align:center;
+ }
+ .flavours-st, #product{
+    width:60%;
+    text-align:center;
+    margin:0 auto;
+    padding:1%;
+}
+#flavours, #product{
+    padding:4%;
+}
+ .raspberry{
+    color:#ea527d;
+ }
+ .lemon{
+    color:#dd8a2e;
+ }
+ .peach{
+    color: #d87163;
+ }
+ #product{
+     color:#d87163;
+ }
+ .btn a{
+    text-decoration:none;
+    color:white;
+    font-family: 'geosanslightregular';
+}
+.sizer {
+    width: 70%;
+    margin:0 auto,
+  }
+.container{
+    padding:5%;
+}
+
+
+
+
