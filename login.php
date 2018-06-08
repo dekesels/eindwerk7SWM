@@ -17,7 +17,7 @@
             echo "Welkom, " .$_SESSION['name'] ;
             if( $_SESSION['rank'] == 2 ){
                 ?>
-                <a href='admin.php'> Controle Paneel </a>
+                <a href='signin.php'> Controle Paneel </a>
                 <?php
             }
             ?>
@@ -80,18 +80,23 @@
     </ul>
   </nav>
   <div >
-
+  <div class="col-md-4 ml-auto">
+      <a href="signin.php" class="btn-secondary btn-outline-dark btn-sm">Sign in.</a><a href="login.php" class="btn-secondary btn-outline-dark btn-sm">Log in.</a>
+  </div>
     <body>
-      <div class="register">
+      <div class="col-md-3 offset-md-3 pt-5 pb-5">
         <h1>Log in als admin</h1>
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
             <label for="name">Naam : </label>
             <input type="text" name="username" placeholder="Naam" autofocus required />
+            <br><br>
+            <label for="name">Wachtwoord : </label>
             <input type="password" name="password" placeholder="Wachtwoord" required />
+            <br><br>
             <input type="hidden" name="rank" placeholder="" />
-            <input type="submit" name="Submit" value="Submit!" />
-        </form>
-        <a href="register.php">Registreer</a>     
+            <br><br>
+            <input type="submit" class="btn-secondary btn-outline-dark btn-sm" name="Submit" value="Log in." />
+        </form>    
         
         </div>
     <div class="footer">

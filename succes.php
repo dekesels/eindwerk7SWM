@@ -55,46 +55,10 @@
         <img src="images/bottles.png" class="d-inline-block align-top bottles" alt="image of the bottles">
       </div>
       <div class="col-sm">
-        <h1>TASTE NATURE</h1>
-        <p class="italic">Ontdek de smaak van de natuur op een gezonde manier, en een lekkere manier!</p>
-        <a href="#product" class="btn btn-main">ONTDEK</a>
-      </div>
-    </div>
+       <p>Uw bestelling is gelukt zonder enige problemen, u ontvangt binnen enkele momenten een mail met uw factuur!</p>
+        <p>Mocht u deze niet ontvangen, gelieve een mail te sturen naar info@fruktovy.be en we zoeken voor u uit waar het precies misgelopen is!</p>
+        <a href="index.php" class="btn btn-main">Keer terug naar de home-pagina.</a>
   </div>
-  <div id="flavours">
-    <div class="flavours-st">
-      <h2>SMAKEN</h2>
-      <p>In ons assortiment van smaken zit voor elk wat wils. Maak zelf de keuze of je favoriete smaak de zoete,
-        de zure of de gulden middenweg is. Miscchien vallen ze alle drie wel in de smaak!</p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-sm">
-        <h3 class="lemon">CITROEN</h3>
-        <p>Je zure vriend die eerder zorgt voor een explosie van smaak in je mond</p>
-        <img src="images/lemon.svg" width="150"  class="d-inline-block align-top" alt="SVG of lemon">
-      </div>
-      <div class="col-sm">
-        <h3 class="raspberry">FRAMBOOS</h3>
-        <p>De gulden middenweg, heeft zowel een explosie van smaak als een zoete nasmaak</p>
-        <img src="images/raspberry.svg" width="150"  class="d-inline-block align-top" alt="SVG of raspberry">
-      </div>
-      <div class="col-sm">
-        <h3 class="peach">PERZIK</h3>
-        <p>Je zoete vriend die ook zoet is zonder een bom van suikers</p>
-        <img src="images/peach.svg" width="150"  class="d-inline-block align-top" alt="SVG of peach">
-      </div>
-    </div>
-    <a href="order.php" class="btn">BESTELLEN</a>
-  </div>
-  <div id="product">
-    <h2>PRODUCT</h2>
-    <p>Met ons product willen we mensen die een gezonde levensstijl hebben ook laten genieten van zoete drankjes,
-      met minder suikers maar met net zoveel meer smaak!</p>
-      <div class="sizer">
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZttvNOsG7Iw?rel=0" allowfullscreen></iframe>
-        </div>
-      </div>  
   </div>
   <div class="footer">
       <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>

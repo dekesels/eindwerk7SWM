@@ -33,7 +33,7 @@ include("includes/db_conn.php");
         $sql = "INSERT INTO order_product (voornaam, naam, telefoon, adres, woonplaats, postcode, bedrijf, id, lemon, raspberry, peach) VALUES ('$voornaam', '$naam', '$telefoon', '$adres', '$woonplaats', '$postcode', '$bedrijf', '$id', '$amountLemon', '$amountRaspberry', '$amountPeach' )";
         if(mysqli_query($conn, $sql )){
             echo "Records added successfully.";
-            header("Location:index.php");
+            header("Location:succes.php");
             exit;
         } else{
             echo "ERROR: $sql. " . mysqli_error($conn);

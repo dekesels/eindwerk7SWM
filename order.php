@@ -52,6 +52,9 @@ include("includes/db_conn.php");
       </li>
     </ul>
   </nav>
+  <div class="col-md-4 ml-auto">
+      <a href="admin.php" class="btn-secondary btn-outline-dark btn-sm">Sign in.</a><a href="login.php" class="btn-secondary btn-outline-dark btn-sm">Log in.</a>
+    </div>
   <div class="container">
       <form  method="post" action="order__backend.php">
         <h2 class="lemon">BESTELLEN</h2>
