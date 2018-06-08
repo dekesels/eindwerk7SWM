@@ -46,7 +46,7 @@
             <label for="vraag">Vraag (*)</label>
             <textarea name="vraag" id="vraag" required></textarea>
             
-            <input type="submit" value="verzenden">
+            <button type="submit" value="verzenden"></button>
 		
         </form>
 	

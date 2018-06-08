@@ -1,3 +1,7 @@
+<?php
+session_start(); // Altijd nodig om te starten ook op andere paginas
+include("includes/db_conn.php");
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,53 +59,52 @@
     <h2 class="lemon">CONTACTEER ONS</h2>
     <p>We helpen je graag verder. Met een duidelijk antwoord op je vraag bijvoorbeeld, en dat zo snel mogelijk.
         Ook is het voor bedrijven mogelijk om proefpakketten aan te vragen. Graag tot binnenkort!</p>
-  <div>
+
      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <div class="row">
             <div class="col-sm">
                 <div class="form-group">
-                <label for="voornaam">Voornaam *</label>
-                <input type="text" class="form-control" id="voornaam" autofocus required>
+                  <label for="voornaam">Voornaam *</label>
+                  <input type="text" class="form-control" name="voornaam" id="voornaam" autofocus required>
                 </div>
                 <div class="form-group">
-                <label for="naam">Naam *</label>
-                <input type="text" class="form-control" id="naam" required>
+                 <label for="naam">Naam *</label>
+                  <input type="text" class="form-control" name="naam" id="naam" required>
                 </div>
                 <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" class="form-control" id="email" required>
+                  <label for="email">Email *</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
                 </div>
                 <div class="form-group">
-                        <label for="telefoon">Telefoon *</label>
-                        <input type="tel" class="form-control" id="tel" required>
+                  <label for="telefoon">Telefoon *</label>
+                  <input type="tel" class="form-control" name="telefoon" id="telefoon" required>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                <label for="adres">Adres</label>
-                <input type="text" class="form-control" id="adres">
+                  <label for="adres">Adres</label>
+                  <input type="text" class="form-control" name="adres" id="adres">
                 </div>
                 <div class="form-group">
-                    <label for="woonplaats">Woonplaats</label>
-                    <input type="text" class="form-control" id="woonplaats">
+                  <label for="woonplaats">Woonplaats</label>
+                  <input type="text" class="form-control" name="woonplaats" id="woonplaats">
                 </div>
                 <div class="form-group">
-                    <label for="postcode">Postcode</label>
-                    <input type="text" class="form-control" id="postcode">
+                  <label for="postcode">Postcode</label>
+                  <input type="text" class="form-control" name="postcode" id="postcode">
                 </div>
                 <div class="form-group">
-                        <label for="bedrijf">Bedrijf</label>
-                        <input type="text" class="form-control" id="bedrijf">
+                  <label for="bedrijf">Bedrijf</label>
+                  <input type="text" class="form-control" name="bedrijf" id="bedrijf">
                 </div>
             </div>
         </div>
         <div class="form-group">
             <label for="vraag">Vraag *</label>
-            <textarea class="form-control" id="vraag" rows="3" required></textarea>
+            <textarea class="form-control" name="vraag" id="vraag" rows="3" required></textarea>
         </div>     
-        <button type="submit" class="btn btn-primary">VERZENDEN</button>
+        <input type="submit" value="VERZENDEN" class="btn btn-main">
     </form>
-  </div>
   </div>
   <div class="footer">
       <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>
@@ -113,18 +116,35 @@
 <?php
 // validatie
 if(isset($_POST['voornaam'])&&isset($_POST['naam'])&&isset($_POST['email'])&&isset($_POST['vraag'])){
-  
     $_POST['voornaam'] = htmlspecialchars($_POST['voornaam']);
     $_POST['naam'] = htmlspecialchars($_POST['naam']);
-    $_POST['mail'] = htmlspecialchars($_POST['mail']);
-    $_POST['bedrijf'] = htmlspecialchars($_POST['bedrijf']);
+    $_POST['email'] = htmlspecialchars($_POST['email']);
+    $_POST['telefoon'] = htmlspecialchars($_POST['telefoon']);
     $_POST['adres'] = htmlspecialchars($_POST['adres']);
-    $_POST['postcode'] = htmlspecialchars($_POST['postcode']);
     $_POST['woonplaats'] = htmlspecialchars($_POST['woonplaats']);
-    $_POST['tel'] = htmlspecialchars($_POST['tel']);
-    $_POST['website'] = htmlspecialchars($_POST['website']);
+    $_POST['postcode'] = htmlspecialchars($_POST['postcode']);
+    $_POST['bedrijf'] = htmlspecialchars($_POST['bedrijf']);
     $_POST['vraag'] = htmlspecialchars($_POST['vraag']);
-  
+
+    $voornaam = $_POST['voornaam'];
+    $naam = $_POST['naam'];
+    $email = $_POST['email'];
+    $telefoon = $_POST['telefoon'];
+    $adres = $_POST['adres'];
+    $woonplaats = $_POST['woonplaats'];
+    $postcode = $_POST['postcode'];
+    $bedrijf = $_POST['bedrijf'];
+    $vraag = $_POST['vraag'];
+
+    // attempt insert query execution
+    $sql = "INSERT INTO contact (voornaam, naam, email, telefoon, adres, woonplaats, postcode, bedrijf, vraag) VALUES ('$voornaam', '$naam', '$email', '$telefoon', '$adres', '$woonplaats', '$postcode', '$bedrijf', '$vraag')";
+      if(mysqli_query($conn, $sql )){
+        echo "We hebben je vraag ontvangen!";
+        exit;
+    } else{
+        echo "ERROR: $sql. " . mysqli_error($conn);
+    }
+    
     $to = "dekesels@visocloud.org";
     $subject = "contact via site";
 

@@ -1,5 +1,5 @@
 <?php
-session_start(); // Altijd nodig om te starten ook op andere paginasQ
+session_start(); // Altijd nodig om te starten ook op andere paginas
 include("includes/db_conn.php");
 ?>
 <html lang="en">
