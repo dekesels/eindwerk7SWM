@@ -1,3 +1,7 @@
+<?php
+session_start(); // Altijd nodig om te starten ook op andere paginasQ
+include("includes/db_conn.php");
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,132 +53,135 @@
     </ul>
   </nav>
   <div class="container">
-    <h2 class="lemon">BESTELLEN</h2>
-    <div class="row order">
-        <div class="col">
-            <img src="images/lemon.svg" width="50"  class="d-inline-block align-top" alt="SVG of lemon">
+      <form  method="post" action="order__backend.php">
+        <h2 class="lemon">BESTELLEN</h2>
+        <div class="row order">
+            <div class="col">
+                <img src="images/lemon.svg" width="50"  class="d-inline-block align-top" alt="SVG of lemon">
+            </div>
+            <div class="col-7">
+                <h3 class="lemon">CITROEN</h3>
+                <p>Je zure vriend die eerder zorgt voor een explosie van smaak in je mond</p>
+            </div>
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <img src="images/plus.svg" alt="" />
+                    </button>
+                    <input type="text" id="amount" name="amountLemon" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <img src="images/minus.svg" alt="" />
+                    </button>
+                </div>
+            <div class="col">
+                    <p>0,00€</p>
+            </div>
         </div>
-        <div class="col-7">
-            <h3 class="lemon">CITROEN</h3>
-            <p>Je zure vriend die eerder zorgt voor een explosie van smaak in je mond</p>
-        </div>
-        <div class="col">
-                <p>+</p>
-        </div>
-        <div class="col">
-                <p>0</p>
-        </div>
-        <div class="col">
-                <p>-</p>
-        </div>
-        <div class="col">
-                <p>0,00€</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <img src="images/raspberry.svg" width="50"  class="d-inline-block align-top" alt="SVG of raspberry">
-        </div>
-        <div class="col-7">
-            <h3 class="raspberry">FRAMBOOS</h3>
-            <p>De gulden middenweg, heeft zowel een explosie van smaak als een zoete nasmaak</p>
-        </div>
-        <div class="col">
-                <p>+</p>
-        </div>
-        <div class="col">
-                <p>0</p>
-        </div>
-        <div class="col">
-                <p>-</p>
-        </div>
-        <div class="col">
-                <p>0,00€</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <img src="images/peach.svg" width="50"  class="d-inline-block align-top" alt="SVG of peach">
-        </div>
-        <div class="col-7">
-            <h3 class="peach">PERZIK</h3>
-            <p>Je zoete vriend die ook zoet is zonder een bom van suikers</p>
-        </div>
-        <div class="col">
-                <p>+</p>
-        </div>
-        <div class="col">
-                <p>0</p>
-        </div>
-        <div class="col">
-                <p>-</p>
-        </div>
-        <div class="col">
-                <p>0,00€</p>
-        </div>
-    </div>
-
-  <div>
-    <h2 class="lemon">PERSOONLIJKE GEGEVENS</h2>
-    <form>
         <div class="row">
-            <div class="col-sm">
-                <div class="form-group">
-                <label for="exampleInputEmail1">Voornaam</label>
-                <input type="text" class="form-control" id="voornaam">
-                </div>
-                <div class="form-group">
-                <label for="exampleInputPassword1">Naam</label>
-                <input type="text" class="form-control" id="naam">
-                </div>
-                <div class="form-group">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" id="email">
-                </div>
-                <div class="form-group">
-                        <label for="exampleInputPassword1">Telefoon</label>
-                        <input type="tel" class="form-control" id="tel">
-                </div>
+            <div class="col">
+                <img src="images/raspberry.svg" width="50"  class="d-inline-block align-top" alt="SVG of raspberry">
             </div>
-            <div class="col-sm">
-                <div class="form-group">
-                <label for="exampleInputPassword1">Adres</label>
-                <input type="text" class="form-control" id="adres">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Woonplaats</label>
-                    <input type="text" class="form-control" id="woonplaats">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Postcode</label>
-                    <input type="text" class="form-control" id="postcode">
-                </div>
-                <div class="form-group">
-                        <label for="exampleInputPassword1">Bedrijf</label>
-                        <input type="text" class="form-control" id="bedrijf">
-                </div>
-                </div>
+            <div class="col-7">
+                <h3 class="raspberry">FRAMBOOS</h3>
+                <p>De gulden middenweg, heeft zowel een explosie van smaak als een zoete nasmaak</p>
             </div>
-            <h2 class="lemon">BETAALMETHODES</h2>
-                <div class="form-check">
-                    <input class="check" type="checkbox" id="paypal" value="paypal" aria-label="...">
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <img src="images/plus.svg" alt="" />
+                    </button>
+                    <input type="text" id="amount" name="amountRaspberry" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <img src="images/minus.svg" alt="" />
+                    </button>
                 </div>
-                <div class="form-check">
-                        <input class="check" type="checkbox" id="visa" value="visa" aria-label="...">
+            <div class="col">
+                    <p>0,00€</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="images/peach.svg" width="50"  class="d-inline-block align-top" alt="SVG of peach">
+            </div>
+            <div class="col-7">
+                <h3 class="peach">PERZIK</h3>
+                <p>Je zoete vriend die ook zoet is zonder een bom van suikers</p>
+            </div>
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <img src="images/plus.svg" alt="" />
+                    </button>
+                    <input type="text" id="amount" name="amountPeach" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <img src="images/minus.svg" alt="" />
+                    </button>
                 </div>
-                <div class="form-check">
-                        <input class="check" type="checkbox" id="bancontact" value="bancontact" aria-label="...">
+            <div class="col">
+                    <p>0,00€</p>
+            </div>
+        </div>
+
+      <div>
+        <h2 class="lemon">PERSOONLIJKE GEGEVENS</h2>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputName" class="col-sm col-form-label">Volledige Naam : </label>
+                        <div class="col-sm">
+                            <input type="text" name="inputName" class="form-control" id="inputName" placeholder="John Doe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputEmail" class="col-sm col-form-label">Email : </label>
+                        <div class="col-sm">
+                            <input type="email" name="inputEmail" class="form-control" id="inputEmail" placeholder="John@Doe.Com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputPassword1">Telefoon</label>
+                            <input type="tel" class="form-control" id="tel">
+                    </div>
                 </div>
-                  
-            <button type="submit" class="btn btn-primary">BESTELLEN</button>
+                <div class="col-sm">
+                    <div class="form-group">
+                    <label for="exampleInputPassword1">Adres</label>
+                    <input type="text" class="form-control" id="adres">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Woonplaats</label>
+                        <input type="text" class="form-control" id="woonplaats">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Postcode</label>
+                        <input type="text" class="form-control" id="postcode">
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputPassword1">Bedrijf</label>
+                            <input type="text" class="form-control" id="bedrijf">
+                    </div>
+                    </div>
+                </div>
+                <h2 class="lemon">BETAALMETHODES</h2>
+                    <div class="form-check">
+                        <input class="check" type="checkbox" id="paypal" value="paypal" aria-label="...">
+                    </div>
+                    <div class="form-check">
+                            <input class="check" type="checkbox" id="visa" value="visa" aria-label="...">
+                    </div>
+                    <div class="form-check">
+                            <input class="check" type="checkbox" id="bancontact" value="bancontact" aria-label="...">
+                    </div>
+
+                <button type="submit" class="btn btn-primary">BESTELLEN</button>
           </form>
   </div>
   </div>
   <div class="footer">
       <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>
   </div>
-  
-  <script src="js/dist/main.min.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/dist/main.min.js"></script>
 </body>
 </html>

@@ -53,54 +53,53 @@
     <p>We helpen je graag verder. Met een duidelijk antwoord op je vraag bijvoorbeeld, en dat zo snel mogelijk.
         Ook is het voor bedrijven mogelijk om proefpakketten aan te vragen. Graag tot binnenkort!</p>
   <div>
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form>
         <div class="row">
             <div class="col-sm">
                 <div class="form-group">
-                <label for="voornaam">Voornaam*</label>
-                <input type="text" class="form-control" id="voornaam" required autofocus>
+                <label for="exampleInputEmail1">Voornaam</label>
+                <input type="text" class="form-control" id="voornaam">
                 </div>
                 <div class="form-group">
-                <label for="naam">Naam*</label>
-                <input type="text" class="form-control" id="naam" required>
+                <label for="exampleInputPassword1">Naam</label>
+                <input type="text" class="form-control" id="naam">
                 </div>
                 <div class="form-group">
-                <label for="email">Email*</label>
-                <input type="email" class="form-control" id="email" required>
+                <label for="exampleInputPassword1">Email</label>
+                <input type="email" class="form-control" id="email">
                 </div>
                 <div class="form-group">
-                <label for="telefoon">Telefoon</label>
-                <input type="tel" class="form-control" id="telefoon">
+                        <label for="exampleInputPassword1">Telefoon</label>
+                        <input type="tel" class="form-control" id="tel">
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
-                <label for="adres">Adres</label>
+                <label for="exampleInputPassword1">Adres</label>
                 <input type="text" class="form-control" id="adres">
                 </div>
                 <div class="form-group">
-                    <label for="woonplaats">Woonplaats</label>
+                    <label for="exampleInputPassword1">Woonplaats</label>
                     <input type="text" class="form-control" id="woonplaats">
                 </div>
                 <div class="form-group">
-                    <label for="postcode">Postcode</label>
+                    <label for="exampleInputPassword1">Postcode</label>
                     <input type="text" class="form-control" id="postcode">
                 </div>
                 <div class="form-group">
-                        <label for="bedrijf">Bedrijf</label>
+                        <label for="exampleInputPassword1">Bedrijf</label>
                         <input type="text" class="form-control" id="bedrijf">
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <label for="vraag">Vraag*</label>
-            <textarea class="form-control" id="vraag" rows="3" required></textarea>
+            <label for="vraag">Vraag</label>
+            <textarea class="form-control" id="vraag" rows="3"></textarea>
         </div>     
-        <button type="submit" value="verzenden" class="btn btn-primary">VERZENDEN</button>
+        <button type="submit" class="btn btn-primary">VERZENDEN</button>
     </form>
   </div>
   </div>
-
   <div class="footer">
       <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>
   </div>
@@ -108,53 +107,3 @@
   <script src="js/dist/main.min.js"></script>
 </body>
 </html>
-<?php
-// validatie
-if(isset($_POST['voornaam'])&&isset($_POST['naam'])&&isset($_POST['email'])&&isset($_POST['vraag'])){
-  
-    $_POST['voornaam'] = htmlspecialchars($_POST['voornaam']);
-    $_POST['naam'] = htmlspecialchars($_POST['naam']);
-    $_POST['email'] = htmlspecialchars($_POST['email']);
-    $_POST['vraag'] = htmlspecialchars($_POST['vraag']);
-  
-    $to = "dekesels@visocloud.org";
-    $subject = "Fruktovy - vraag";
-    $message = "
-    <html>
-    <head>
-    <title>Contact via de website, Fruktovy</title>
-    </head>
-    <body>
-    <p>De email bevat HTML-tags!</p>
-    <table>
-    <tr>
-    <th>Voornaam</th>
-    <th>Achternaam</th>
-    <th>E-mail</th>
-    <th>Vraag/Bericht</th>
-    </tr>
-    <tr>
-    <td>".$_POST["voornaam"]."</td>
-    <td>".$_POST["naam"]."</td>
-    <td>".$_POST["email"]."</td>
-    <td>".$_POST["vraag"]."</td>
-    </tr>
-    </table>
-    </body>
-    </html>
-    ";
-    // Always set content-type when sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    // More headers
-    $headers .= 'From: ".$_POST["email"]." ' . "\r\n";
-    $headers .= 'Cc: ".$_POST["email"]." ' . "\r\n";
-    if(mail($to,$subject,$message,$headers)){
-        echo "<p>Bericht is verzonden!</p>";
-      } else {
-        echo "<p>Fout bij het verzenden van de e-mail.</p>";
-      }
-  
-}
- 
-?>
