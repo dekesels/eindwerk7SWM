@@ -73,7 +73,7 @@ include("includes/db_conn.php");
                     </button>
                 </div>
             <div class="col">
-                    <p>0,00€</p>
+                    <p>1,20€</p>
             </div>
         </div>
         <div class="row">
@@ -94,7 +94,7 @@ include("includes/db_conn.php");
                     </button>
                 </div>
             <div class="col">
-                    <p>0,00€</p>
+                    <p>1,20€</p>
             </div>
         </div>
         <div class="row">
@@ -115,7 +115,7 @@ include("includes/db_conn.php");
                     </button>
                 </div>
             <div class="col">
-                    <p>0,00€</p>
+                    <p>1,20€</p>
             </div>
         </div>
 
@@ -126,39 +126,45 @@ include("includes/db_conn.php");
                 <div class="col-sm">
                     <div class="form-group">
                         <input type="hidden" name="id" value="" >
-                        <label for="inputName" class="col-sm col-form-label">Volledige Naam : </label>
-                        <div class="col-sm">
-                            <input type="text" name="inputName" class="form-control" id="inputName" placeholder="John Doe">
-                        </div>
+                        <label for="inputSurname">Voornaam * </label>
+                            <input type="text" name="inputSurname" class="form-control" id="inputSurname" required>
                     </div>
                     <div class="form-group">
                         <input type="hidden" name="id" value="" >
-                        <label for="inputEmail" class="col-sm col-form-label">Email : </label>
-                        <div class="col-sm">
-                            <input type="email" name="inputEmail" class="form-control" id="inputEmail" placeholder="John@Doe.Com">
-                        </div>
+                        <label for="inputName">Naam * </label>
+                            <input type="text" name="inputName" class="form-control" id="inputName" required>
                     </div>
                     <div class="form-group">
-                            <label for="exampleInputPassword1">Telefoon</label>
-                            <input type="tel" class="form-control" id="tel">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputEmail">Email * </label>
+                            <input type="email" name="inputEmail" class="form-control" id="inputEmail" required>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputPhone">Telefoon * </label>
+                            <input type="tel" name="inputPhone" class="form-control" id="inputPhone" required>
+                    </div>
+                    </div>
                 <div class="col-sm">
                     <div class="form-group">
-                    <label for="exampleInputPassword1">Adres</label>
-                    <input type="text" class="form-control" id="adres">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputAddress">Adres * </label>
+                            <input type="text" name="inputAddress" class="form-control" id="inputAddress" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Woonplaats</label>
-                        <input type="text" class="form-control" id="woonplaats">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputCity">Woonplaats * </label>
+                            <input type="text" name="inputCity" class="form-control" id="inputCity" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Postcode</label>
-                        <input type="text" class="form-control" id="postcode">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputCode">Postcode * </label>
+                            <input type="text" name="inputCode" class="form-control" id="inputCode" required>
                     </div>
                     <div class="form-group">
-                            <label for="exampleInputPassword1">Bedrijf</label>
-                            <input type="text" class="form-control" id="bedrijf">
+                        <input type="hidden" name="id" value="" >
+                        <label for="inputCompany">Bedrijf </label>
+                            <input type="text" name="inputCompany" class="form-control" id="inputCompany">
                     </div>
                     </div>
                 </div>
@@ -172,7 +178,7 @@ include("includes/db_conn.php");
                     <div class="form-check">
                             <input class="check" type="checkbox" id="bancontact" value="bancontact" aria-label="...">
                     </div>
-
+                    </div>
                 <button type="submit" class="btn btn-primary">BESTELLEN</button>
           </form>
   </div>
