@@ -65,3 +65,23 @@ $(document).ready(function(){
         $input.val(value);
     });
 });
+
+
+var prodAmount = document.querySelectorAll('.amountProduct');
+
+for (var i = 0; i < prodAmount.length; i++) {
+    prodAmount[i].addEventListener('change', function(event) {
+        calculateTotal();
+    });
+}
+
+function calculateTotal(){
+
+    var som = 0;
+
+    for(var i = 0; i < prodAmount.length; i++){
+        som += (prodAmount[i].dataset.price * prodAmount[i].value);
+    }
+
+    document.querySelector('.totalPriceOfProducts').innerHTML = som.toFixed(2);
+}

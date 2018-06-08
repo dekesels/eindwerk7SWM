@@ -25,8 +25,6 @@ include("includes/db_conn.php");
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/dist/main.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/dist/main.css">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fruktovy</title>
 </head>
 <body>
@@ -67,13 +65,7 @@ include("includes/db_conn.php");
                 <p>Je zure vriend die eerder zorgt voor een explosie van smaak in je mond</p>
             </div>
                 <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <img src="images/plus.svg" alt="" />
-                    </button>
-                    <input type="text" id="amount" name="amountLemon" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <img src="images/minus.svg" alt="" />
-                    </button>
+                    <input type="number" class="amountProduct" min="0"  name="amountLemon" value="0" data-price="1.20">
                 </div>
             <div class="col">
                     <p>1,20€</p>
@@ -88,13 +80,7 @@ include("includes/db_conn.php");
                 <p>De gulden middenweg, heeft zowel een explosie van smaak als een zoete nasmaak</p>
             </div>
                 <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <img src="images/plus.svg" alt="" />
-                    </button>
-                    <input type="text" id="amount" name="amountRaspberry" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <img src="images/minus.svg" alt="" />
-                    </button>
+                    <input type="number" class="amountProduct" min="0"  name="amountRaspberry" value="0" data-price="1.20">
                 </div>
             <div class="col">
                     <p>1,20€</p>
@@ -109,19 +95,16 @@ include("includes/db_conn.php");
                 <p>Je zoete vriend die ook zoet is zonder een bom van suikers</p>
             </div>
                 <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <img src="images/plus.svg" alt="" />
-                    </button>
-                    <input type="text" id="amount" name="amountPeach" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <img src="images/minus.svg" alt="" />
-                    </button>
+                    <input type="number" class="amountProduct" min="0" name="amountPeach" value="0" data-price="1.20">
                 </div>
             <div class="col">
                     <p>1,20€</p>
             </div>
         </div>
-
+    <div>
+        <h2 class="lemon">TOTAAL PRIJS<h2>
+        <h4 class="btn-sm col-md-3 ml-auto">De totale prijs bedraagt €<span class="totalPriceOfProducts">0</span></h4>
+    </div>
       <div>
         <h2 class="lemon">PERSOONLIJKE GEGEVENS</h2>
 
@@ -173,16 +156,19 @@ include("includes/db_conn.php");
                 </div>
                 <h2 class="lemon">BETAALMETHODES</h2>
                     <div class="form-check">
-                        <input class="check" type="checkbox" id="paypal" value="paypal" aria-label="...">
+                        <input class="check" type="checkbox" id="inputPay" name="inputPay" value="1" aria-label="...">
+                        <img src="images/paypal.png" alt="logo PayPal" />
                     </div>
                     <div class="form-check">
-                            <input class="check" type="checkbox" id="visa" value="visa" aria-label="...">
+                            <input class="check" type="checkbox" id="inputPay" name="inputPay" value="2" aria-label="...">
+                            <img src="images/visa.jpg" alt="logo VISA" />
                     </div>
                     <div class="form-check">
-                            <input class="check" type="checkbox" id="bancontact" value="bancontact" aria-label="...">
+                            <input class="check" type="checkbox" id="inputPay" name="inputPay" value="3" aria-label="...">
+                            <img src="images/bancontact.png" alt="logo Bancontact" />
                     </div>
                     </div>
-                <button type="submit" class="btn btn-primary">BESTELLEN</button>
+                <button type="submit" class="btn btn-main">BESTELLEN</button>
           </form>
   </div>
   </div>

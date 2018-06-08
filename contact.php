@@ -158,12 +158,17 @@ if(isset($_POST['voornaam'])&&isset($_POST['naam'])&&isset($_POST['email'])&&iss
     <table>
     <tr>
     <th>Naam</th>
+    <br>
     <th>E-mail</th>
+    <br>
     <th>Bericht</th>
+    <br>
     </tr>
     <tr>
-    <td>".$_POST["naam"]."</td>
+    <td>".$_POST["naam"]." ".$_POST["voornaam"]."</td>
+    <br>
     <td>".$_POST["email"]."</td>
+    <br>
     <td>".$_POST["vraag"]."</td>
     </tr>
     </table>
@@ -176,8 +181,8 @@ if(isset($_POST['voornaam'])&&isset($_POST['naam'])&&isset($_POST['email'])&&iss
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: <test@visocloud.org>' . "\r\n";
-    $headers .= 'Cc: test@visocloud.org' . "\r\n";
+    $headers .= 'From: <info@fruktovy.be>' . "\r\n";
+    $headers .= 'Cc: info@fruktovy.be' . "\r\n";
 
     if(mail($to,$subject,$message,$headers)){
         echo "<p>mail verstuurd</p>";

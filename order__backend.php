@@ -11,6 +11,7 @@ include("includes/db_conn.php");
         $_POST['inputCity'] = mysqli_real_escape_string($conn, $_POST['inputCity']);
         $_POST['inputCode'] = mysqli_real_escape_string($conn, $_POST['inputCode']);
         $_POST['inputCompany'] = mysqli_real_escape_string($conn, $_POST['inputCompany']);
+        $_POST['inputPay'] = mysqli_real_escape_string($conn, $_POST['inputPay']);
         $_POST['id'] = (int) $_POST['id'];
         $_POST['amountLemon'] = (int) $_POST['amountLemon'];
         $_POST['amountRaspberry'] = (int) $_POST['amountRaspberry'];
@@ -24,13 +25,14 @@ include("includes/db_conn.php");
         $woonplaats = $_POST['inputCity'];
         $postcode = $_POST['inputCode'];
         $bedrijf = $_POST['inputCompany'];
+        $betaalmethodes = $_POST['inputPay'];
         $id = $_POST['id'];
         $amountLemon =  $_POST['amountLemon'];
         $amountRaspberry =  $_POST['amountRaspberry'];
         $amountPeach =  $_POST['amountPeach'];
 
         // attempt insert query execution
-        $sql = "INSERT INTO order_product (voornaam, naam, telefoon, adres, woonplaats, postcode, bedrijf, id, lemon, raspberry, peach) VALUES ('$voornaam', '$naam', '$telefoon', '$adres', '$woonplaats', '$postcode', '$bedrijf', '$id', '$amountLemon', '$amountRaspberry', '$amountPeach' )";
+        $sql = "INSERT INTO order_product (voornaam, naam, telefoon, adres, woonplaats, postcode, bedrijf, betaalmethodes, id, lemon, raspberry, peach) VALUES ('$voornaam', '$naam', '$telefoon', '$adres', '$woonplaats', '$postcode', '$bedrijf', '$betaalmethodes', '$id', '$amountLemon', '$amountRaspberry', '$amountPeach' )";
         if(mysqli_query($conn, $sql )){
             echo "Records added successfully.";
             header("Location:succes.php");
