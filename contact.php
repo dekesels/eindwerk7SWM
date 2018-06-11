@@ -31,7 +31,7 @@ include("includes/db_conn.php");
 </head>
 <body>
   <nav class="navbar navbar-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.php">
       <img src="images/logo.png" width="150" height="45" class="d-inline-block align-top" alt="logo Fruktovy">
     </a>
     <ul class="nav justify-content-center">
@@ -105,14 +105,9 @@ include("includes/db_conn.php");
         </div>     
         <input type="submit" value="VERZENDEN" class="btn btn-main">
     </form>
+    <a href="nieuwsbrief.php" class="btn-secondary btn-outline-dark btn-sm">Vraag hier uw nieuwsbrief aan</a>
   </div>
-  <div class="footer">
-      <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>
-  </div>
-  
-  <script src="js/dist/main.min.js"></script>
-</body>
-</html>
+
 <?php
 // validatie
 if(isset($_POST['voornaam'])&&isset($_POST['naam'])&&isset($_POST['email'])&&isset($_POST['vraag'])){
@@ -139,57 +134,64 @@ if(isset($_POST['voornaam'])&&isset($_POST['naam'])&&isset($_POST['email'])&&iss
     // attempt insert query execution
     $sql = "INSERT INTO contact (voornaam, naam, email, telefoon, adres, woonplaats, postcode, bedrijf, vraag) VALUES ('$voornaam', '$naam', '$email', '$telefoon', '$adres', '$woonplaats', '$postcode', '$bedrijf', '$vraag')";
       if(mysqli_query($conn, $sql )){
-        echo "We hebben je vraag ontvangen!";
-        exit;
+        echo "<p>We hebben je vraag ontvangen!</p>";
+        //exit;
     } else{
         echo "ERROR: $sql. " . mysqli_error($conn);
     }
     
-    $to = "dekesels@visocloud.org";
-    $subject = "contact via site";
+        $to = "dekesels@visocloud.org";
+        $subject = "contact via site";
 
-    $message = "
-    <html>
-    <head>
-    <title>Contact via site</title>
-    </head>
-    <body>
-    <p>This email contains HTML Tags!</p>
-    <table>
-    <tr>
-    <th>Naam</th>
-    <br>
-    <th>E-mail</th>
-    <br>
-    <th>Bericht</th>
-    <br>
-    </tr>
-    <tr>
-    <td>".$_POST["naam"]." ".$_POST["voornaam"]."</td>
-    <br>
-    <td>".$_POST["email"]."</td>
-    <br>
-    <td>".$_POST["vraag"]."</td>
-    </tr>
-    </table>
-    </body>
-    </html>
-    ";
+        $message = "
+        <html>
+        <head>
+        <title>Contact via site</title>
+        </head>
+        <body>
+        <p>This email contains HTML Tags!</p>
+        <table>
+        <tr>
+        <th>Naam</th>
+        <br>
+        <th>E-mail</th>
+        <br>
+        <th>Bericht</th>
+        <br>
+        </tr>
+        <tr>
+        <td>".$_POST["naam"]." ".$_POST["voornaam"]."</td>
+        <br>
+        <td>".$_POST["email"]."</td>
+        <br>
+        <td>".$_POST["vraag"]."</td>
+        </tr>
+        </table>
+        </body>
+        </html>
+        ";
 
-    // Always set content-type when sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        // Always set content-type when sending HTML email
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-    // More headers
-    $headers .= 'From: <info@fruktovy.be>' . "\r\n";
-    $headers .= 'Cc: info@fruktovy.be' . "\r\n";
+        // More headers
+        $headers .= 'From: <info@fruktovy.be>' . "\r\n";
+        $headers .= 'Cc: info@fruktovy.be' . "\r\n";
 
-    if(mail($to,$subject,$message,$headers)){
-        echo "<p>mail verstuurd</p>";
-      } else {
-        echo "<p>Fout bij het versturen van e-mail</p>";
-      }
-  
-}
+        if(mail($to,$subject,$message,$headers)){
+            echo "<p>mail verstuurd</p>";
+          } else {
+            echo "<p>Fout bij het versturen van e-mail</p>";
+          }
+      
+    }
  
 ?>
+  <div class="footer">
+      <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>
+  </div>
+  
+  <script src="js/dist/main.min.js"></script>
+</body>
+</html>

@@ -1,3 +1,7 @@
+<?php
+session_start(); // Altijd nodig om te starten ook op andere paginas
+include("includes/db_conn.php");
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,6 +53,7 @@
   <div>
     <div class="col-md-4 ml-auto">
       <a href="admin.php" class="btn-secondary btn-outline-dark btn-sm">Sign in.</a><a href="login.php" class="btn-secondary btn-outline-dark btn-sm">Log in.</a>
+      <a href="nieuwsbrief-verzenden.php" class="btn-secondary btn-outline-dark btn-sm">Send newsletter.</a>
     </div>
     <div class="row d-flex align-items-center">
       <div class="col-sm">
@@ -96,6 +101,7 @@
         </div>
       </div>  
   </div>
+  
   <div class="footer">
       <p>Contacteer ons : Stefanie De Kesel dekesels@visocloud.org +32 494 81 50 17</p>
   </div>

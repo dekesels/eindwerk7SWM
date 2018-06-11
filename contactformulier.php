@@ -49,9 +49,9 @@
             <button type="submit" value="verzenden"></button>
 		
         </form>
-	
-	    
+      
 	</div>
+  
 
 	<script src="js/libs/jquery-2.1.4.min.js"></script>
 	<script src="js/main.js"></script>
@@ -82,17 +82,19 @@ if(isset($_POST['voornaam'])&&isset($_POST['naam'])&&isset($_POST['email'])&&iss
     <title>Contact via site</title>
     </head>
     <body>
-    <p>This email contains HTML Tags!</p>
+    <p>Hier de info over uw mail naar Fruktovy</p>
     <table>
     <tr>
-    <th>Naam</th>
-    <th>E-mail</th>
-    <th>Bericht</th>
+    <th>Info</th>
     </tr>
     <tr>
-    <td>".$_POST["naam"]."</td>
-    <td>".$_POST["email"]."</td>
-    <td>".$_POST["vraag"]."</td>
+    <td>Naam: ".$_POST["naam"]."</td>
+    </tr>
+    <tr>
+    <td>E-mail: ".$_POST["email"]."</td>
+    </tr>
+    <tr>
+    <td>Uw vraag: ".$_POST["vraag"]."</td>
     </tr>
     </table>
     </body>

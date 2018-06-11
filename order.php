@@ -29,7 +29,7 @@ include("includes/db_conn.php");
 </head>
 <body>
   <nav class="navbar navbar-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.php">
       <img src="images/logo.png" width="150" height="45" class="d-inline-block align-top" alt="logo Fruktovy">
     </a>
     <ul class="nav justify-content-center">

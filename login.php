@@ -1,23 +1,6 @@
 <?php 
 session_start();
 include("includes/db_conn.php");
-
-
-	if(isset($_POST['username']) && isset($_POST['password'])){
-		$usern = $_POST['username'];
-		$ww = $_POST['password'];
-
-		if($usern =="admin" && $ww == "viso"){
-			$_SESSION['username'] = $_POST['username'];
-			header('Location: admin.php');
-			
-		}elseif ($usern == "" || $ww == ""){
-			echo "vul alle gevraagde informatie in";
-		}else{
-			echo "verkeerde login";
-		}
-	}
-
   
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $unaam = mysqli_real_escape_string($conn, $_POST['username']);
